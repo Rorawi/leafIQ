@@ -1,103 +1,162 @@
+import TopNav from "../components/TopNav";
+import Link from "next/link";
 import Image from "next/image";
+import uploadImage from "../public/assets/uploadPhoto.jpg";
+import { GiCheckMark } from "react-icons/gi";
+import WeatherCards from "@/components/WeatherCards";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+	return (
+		<>
+			<div className="relative">
+				<TopNav />
+				<div className="flex justify-center items-center flex-col gap-3 h-screen bg-[#E8F6E9] pt-10 relative">
+					<div className="absolute text-9xl opacity-10 top-16 left-1">🍃</div>
+					<div className="absolute text-9xl opacity-10 bottom-0 right-1">
+						🍃
+					</div>
+					<div className="relative z-10 px-6 md:px-12 lg:text-center gap-6 mt-5">
+						<h1 className="text-gray-600 font-bold text-4xl lg:text-6xl max-w-5xl">
+							Don't let mystery spots ruin your tomatoes!
+						</h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+						<div className="pt-16">
+							<Link
+								href={"/detect"}
+								className="bg-[#00D26A] rounded-full text-xl px-5 py-5 font-bold text-white"
+							>
+								Detect Now
+							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
+			{/*Steps to take to detect*/}
+			<div className="container mx-auto mt-20 mb-40">
+				<div className="px-8 lg:px-16 mb-40 mt-32">
+					<h1 className="text-gray-600 font-bold text-4xl lg:text-6xl text-center  max-w-5xl mx-auto">
+						Save Your Plants in 3 Simple Steps
+					</h1>
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mt-12">
+						<div className="step">
+							<div className="relative mb-3">
+								<div className="h-96 overflow-hidden rounded-xl">
+									<Image
+										src={uploadImage}
+										alt="Step 1- Upload Image"
+										className="object-cover w-full h-full"
+									/>
+								</div>
+								<span className="absolute left-3 bottom-4 text-5xl text-white font-semibold">
+									1
+								</span>
+							</div>
+							<h3 className="text-3xl text-gray-500 font-bold flex items-center">
+								Snap or Upload a Photo
+							</h3>
+							<p className="text-gray-500 font-normal mt-3">
+								Capture a clear shot of affected leaves or fruits. Our AI works
+								best with close-ups!
+							</p>
+						</div>
+						<div className="step">
+							<div className="relative mb-3">
+								<div className="h-96 overflow-hidden rounded-xl">
+									<Image
+										src={uploadImage}
+										alt="Step 1- Upload Image"
+										className="object-cover w-full h-full"
+									/>
+								</div>
+								<span className="absolute left-3 bottom-4 text-5xl text-white font-semibold">
+									2
+								</span>
+							</div>{" "}
+							<h3 className="text-3xl text-gray-500 font-bold">
+								Instant Analysis
+							</h3>
+							<p className="text-gray-500 font-normal mt-3">
+								Get AI-powered results in <strong>under 10 seconds</strong>. We
+								detect 50+ common diseases.
+							</p>
+						</div>
+						<div className="step">
+							<div className="relative mb-3">
+								<div className="h-96 overflow-hidden rounded-xl">
+									<Image
+										src={uploadImage}
+										alt="Step 1- Upload Image"
+										className="object-cover w-full h-full"
+									/>
+								</div>
+								<span className="absolute left-3 bottom-4 text-5xl text-white font-semibold">
+									3
+								</span>
+							</div>{" "}
+							<h3 className="text-3xl text-gray-500 font-bold">
+								Treat & Prevent
+							</h3>
+							<p className="text-gray-500 font-normal mt-3">
+								Receive tailored solutions – organic remedies, chemical
+								treatments, and prevention tips.
+							</p>
+						</div>
+					</div>
+				</div>
+				{/* Weather forecast */}
+				<div className="px-8 lg:px-16 mt-72">
+					<h1 className="text-gray-600 font-bold text-4xl lg:text-6xl text-center max-w-5xl mx-auto">
+						☘️Weather-Aware Crop Selector
+					</h1>
+					<p className="text-gray-500 text-lg font-normal mt-3 text-center">
+						AI adjusts recommendations based on upcoming frost, rain, or
+						heatwaves
+					</p>
+
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12">
+						<div className="lg:mx-auto flex flex-col justify-center items-start gap-4">
+							<div className="flex gap-5 items-center">
+								<div className="bg-[#E8F6E9] w-12 h-12 rounded-full text-[#00D26A] flex justify-center items-center mb-4 flex-shrink-0">
+									<GiCheckMark className="text-lg lg:text-3xl" />
+								</div>
+								<h3 className="text-lg lg:text-3xl text-gray-500 font-bold mb-4">
+									Location-Based Suggestions
+								</h3>
+							</div>
+							<div className="flex gap-5 items-center">
+								<div className="bg-[#E8F6E9] w-12 h-12 rounded-full text-[#00D26A] flex justify-center items-center mb-4 flex-shrink-0">
+									<GiCheckMark className="text-lg lg:text-3xl" />
+								</div>
+								<h3 className="text-lg lg:text-3xl text-gray-500 font-bold mb-4">
+									Real-Time Weather Adaptation
+								</h3>
+							</div>
+							<div className="flex gap-5 items-center">
+								<div className="bg-[#E8F6E9] w-12 h-12 rounded-full text-[#00D26A] flex justify-center items-center mb-4 flex-shrink-0">
+									<GiCheckMark className="text-lg lg:text-3xl" />
+								</div>
+								<h3 className="text-lg lg:text-3xl text-gray-500 font-bold mb-4">
+									Maximized Harvest Potential
+								</h3>
+							</div>
+						</div>
+						<div className="h-96 overflow-hidden rounded-xl">
+							<Image
+								src={uploadImage}
+								alt="Step 1- Upload Image"
+								className="object-cover w-full h-full"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Footer */}
+		<div className="bg-[#0e9853] py-10">
+			<div className="container mx-auto text-center">
+
+			</div>
+		</div>
+		</>
+	);
 }

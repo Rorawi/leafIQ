@@ -4,15 +4,18 @@ import Image from "next/image";
 import uploadImage from "../public/assets/uploadPhoto.jpg";
 import { GiCheckMark } from "react-icons/gi";
 import WeatherCards from "@/components/WeatherCards";
+import LandingPage from "@/components/LandingPage";
 
 export default function Home() {
 	return (
 		<>
+		<LandingPage />
+		<div className="hidden">
 			<div className="relative">
 				<TopNav />
 				<div className="flex justify-center items-center flex-col gap-3 h-screen bg-[#E8F6E9] pt-10 relative">
 					<div className="absolute text-9xl opacity-10 top-16 left-1">🍃</div>
-					<div className="absolute text-9xl opacity-10 bottom-0 right-1">
+					<div className="absolute text-9xl opacity-10 bottom-4 right-0">
 						🍃
 					</div>
 					<div className="relative z-10 px-6 md:px-12 lg:text-center gap-6 mt-5">
@@ -156,6 +159,7 @@ export default function Home() {
 			<div className="container mx-auto text-center">
 
 			</div>
+		</div>
 		</div>
 		</>
 	);

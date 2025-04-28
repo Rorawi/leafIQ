@@ -1,0 +1,146 @@
+[
+    {
+      "name": "Tomato",
+      "soilPH": { "min": 6.0, "max": 6.8 },
+      "temperature": { "min": 65, "max": 85 },
+      "sunlight": "full",
+      "waterNeeds": "moderate",
+      "growingPeriod": { "min": 60, "max": 100 },
+      "companionPlants": ["Basil", "Marigold", "Onions"],
+      "avoidPlants": ["Potato", "Corn", "Fennel"],
+      "nutrients": { "nitrogen": "high", "phosphorus": "medium", "potassium": "high" }
+    },
+    {
+      "name": "Carrot",
+      "soilPH": { "min": 6.0, "max": 6.8 },
+      "temperature": { "min": 55, "max": 75 },
+      "sunlight": "full",
+      "waterNeeds": "moderate",
+      "growingPeriod": { "min": 70, "max": 80 },
+      "companionPlants": ["Leek", "Chives", "Lettuce"],
+      "avoidPlants": ["Dill", "Parsnip"],
+      "nutrients": { "nitrogen": "low", "phosphorus": "medium", "potassium": "high" }
+    },
+    {
+      "name": "Spinach",
+      "soilPH": { "min": 6.5, "max": 7.5 },
+      "temperature": { "min": 50, "max": 75 },
+      "sunlight": "partial",
+      "waterNeeds": "high",
+      "growingPeriod": { "min": 35, "max": 45 },
+      "companionPlants": ["Strawberries", "Peas", "Radish"],
+      "avoidPlants": ["Potato"],
+      "nutrients": { "nitrogen": "medium", "phosphorus": "medium", "potassium": "medium" }
+    },
+    {
+      "name": "Lettuce",
+      "soilPH": { "min": 6.0, "max": 7.0 },
+      "temperature": { "min": 45, "max": 75 },
+      "sunlight": "partial",
+      "waterNeeds": "high",
+      "growingPeriod": { "min": 30, "max": 60 },
+      "companionPlants": ["Carrot", "Radish", "Strawberry"],
+      "avoidPlants": ["Parsley"],
+      "nutrients": { "nitrogen": "medium", "phosphorus": "low", "potassium": "medium" }
+    },
+    {
+      "name": "Corn",
+      "soilPH": { "min": 5.8, "max": 7.0 },
+      "temperature": { "min": 60, "max": 95 },
+      "sunlight": "full",
+      "waterNeeds": "high",
+      "growingPeriod": { "min": 60, "max": 100 },
+      "companionPlants": ["Beans", "Squash", "Cucumbers"],
+      "avoidPlants": ["Tomato"],
+      "nutrients": { "nitrogen": "high", "phosphorus": "medium", "potassium": "medium" }
+    },
+    {
+      "name": "Cucumber",
+      "soilPH": { "min": 6.0, "max": 7.0 },
+      "temperature": { "min": 70, "max": 95 },
+      "sunlight": "full",
+      "waterNeeds": "high",
+      "growingPeriod": { "min": 50, "max": 70 },
+      "companionPlants": ["Corn", "Beans", "Radish"],
+      "avoidPlants": ["Potato"],
+      "nutrients": { "nitrogen": "high", "phosphorus": "medium", "potassium": "high" }
+    },
+    {
+      "name": "Bell Pepper",
+      "soilPH": { "min": 6.0, "max": 6.8 },
+      "temperature": { "min": 70, "max": 85 },
+      "sunlight": "full",
+      "waterNeeds": "moderate",
+      "growingPeriod": { "min": 60, "max": 90 },
+      "companionPlants": ["Basil", "Onion"],
+      "avoidPlants": ["Beans", "Fennel"],
+      "nutrients": { "nitrogen": "medium", "phosphorus": "medium", "potassium": "medium" }
+    },
+    {
+      "name": "Eggplant",
+      "soilPH": { "min": 5.5, "max": 6.5 },
+      "temperature": { "min": 70, "max": 90 },
+      "sunlight": "full",
+      "waterNeeds": "moderate",
+      "growingPeriod": { "min": 70, "max": 85 },
+      "companionPlants": ["Beans", "Peppers", "Tomatoes"],
+      "avoidPlants": ["Fennel"],
+      "nutrients": { "nitrogen": "medium", "phosphorus": "medium", "potassium": "medium" }
+    },
+    {
+      "name": "Zucchini",
+      "soilPH": { "min": 6.0, "max": 7.5 },
+      "temperature": { "min": 70, "max": 95 },
+      "sunlight": "full",
+      "waterNeeds": "high",
+      "growingPeriod": { "min": 45, "max": 55 },
+      "companionPlants": ["Corn", "Beans", "Nasturtium"],
+      "avoidPlants": ["Potato"],
+      "nutrients": { "nitrogen": "high", "phosphorus": "medium", "potassium": "medium" }
+    },
+    {
+      "name": "Potato",
+      "soilPH": { "min": 5.0, "max": 6.0 },
+      "temperature": { "min": 60, "max": 70 },
+      "sunlight": "full",
+      "waterNeeds": "moderate",
+      "growingPeriod": { "min": 70, "max": 120 },
+      "companionPlants": ["Beans", "Cabbage", "Corn"],
+      "avoidPlants": ["Tomato", "Cucumber"],
+      "nutrients": { "nitrogen": "medium", "phosphorus": "medium", "potassium": "medium" }
+    },
+    {
+      "name": "Onion",
+      "soilPH": { "min": 6.0, "max": 7.0 },
+      "temperature": { "min": 55, "max": 75 },
+      "sunlight": "full",
+      "waterNeeds": "moderate",
+      "growingPeriod": { "min": 90, "max": 120 },
+      "companionPlants": ["Carrot", "Lettuce", "Beet"],
+      "avoidPlants": ["Beans"],
+      "nutrients": { "nitrogen": "medium", "phosphorus": "low", "potassium": "low" }
+    },
+    {
+      "name": "Garlic",
+      "soilPH": { "min": 6.0, "max": 7.0 },
+      "temperature": { "min": 50, "max": 75 },
+      "sunlight": "full",
+      "waterNeeds": "low",
+      "growingPeriod": { "min": 180, "max": 210 },
+      "companionPlants": ["Tomato", "Fruit Trees"],
+      "avoidPlants": ["Peas"],
+      "nutrients": { "nitrogen": "low", "phosphorus": "low", "potassium": "medium" }
+    },
+    {
+      "name": "Cabbage",
+      "soilPH": { "min": 6.0, "max": 7.5 },
+      "temperature": { "min": 45, "max": 75 },
+      "sunlight": "full",
+      "waterNeeds": "moderate-high",
+      "growingPeriod": { "min": 70, "max": 120 },
+      "companionPlants": ["Celery", "Onion"],
+      "avoidPlants": ["Strawberry"],
+      "nutrients": { "nitrogen": "high", "phosphorus": "medium", "potassium": "medium" }
+    }
+  ]
+  

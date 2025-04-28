@@ -1,19 +1,32 @@
+'use client'
+
 import WeatherCards from "@/components/WeatherCards";
 import TopNav from "../../components/TopNav";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Image from "next/image";
+import { useEffect } from "react";
+import WeatherPageSection from "../../components/weather/WeatherPageSection";
 
 export default function Home() {
+	useEffect(() => {
+		fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=585d4a04269c34cc7d11a057cfe5f80b")
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+			})
+			.catch((err) => console.log(err));
+	}, []);
 	return (
 		<div>
 			<div className="relative">
 				<TopNav />
-				<div className="flex justify-center items-center flex-col gap-3 h-screen bg-[#E8F6E9] pt-10 relative">
+				<WeatherPageSection/>
+				<div className="flex justify-center items-center flex-col gap-3 h-screen bg-[#E8F6E9] pt-10 relative hidden">
 					<div className="absolute text-9xl opacity-10 top-16 left-1">🍃</div>
 					<div className="absolute text-9xl opacity-10 bottom-0 right-1">
 						🍃
 					</div>
-					<div className="relative z-10 px-6 md:px-12 gap-6 mt-5">
+					<div className="relative z-10 px-6 md:px-12 gap-6 mt-10">
 						<div className="grid grid-cols-1 lg:grid-cols-2 gap-40 mt-12">
 							<div>
 								<div className="flex items-center gap-2 mb-4">

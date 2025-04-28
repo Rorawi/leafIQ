@@ -1,6 +1,6 @@
 "use client";
 import useSWR from "swr";
-import React, { useEffect } from "react";
+import React from "react";
 import {fetcher} from "../utils/fetcher";
 import Image from "next/image";
 import { Leaf, Camera, CloudRain, Calendar, ArrowRight } from "lucide-react";

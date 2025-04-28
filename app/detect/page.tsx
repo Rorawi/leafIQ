@@ -1,5 +1,4 @@
 import TopNav from "../../components/TopNav";
-import ComingSoon from "../../components/ComingSoon";
 import PlantDetector from "../../components/PlantDetector";
 export default function Detect() {
 	return (

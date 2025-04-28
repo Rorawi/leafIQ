@@ -4,6 +4,7 @@ import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
 import { GrCloudUpload } from "react-icons/gr";
 import PlantDetails from "./PlantDetails";
+import Image from "next/image";
 
 export default function PlantPredictor() {
 	const [model, setModel] = useState<tf.LayersModel | null>(null);
@@ -106,10 +107,12 @@ export default function PlantPredictor() {
 								</label>
 
 								{uploadedImage && (
-									<img
-										src={uploadedImage}
+									<Image
+										src={uploadedImage || ""}
 										alt="Uploaded"
 										className="mt-4 rounded-md w-full"
+										width={500}
+										height={500}
 									/>
 								)}
 							</div>

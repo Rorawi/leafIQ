@@ -1,7 +1,7 @@
 import React from "react";
 import { Leaf, Droplets, ThermometerSun, Sun, Bug } from "lucide-react";
 
-const FormProgressIndicator = ({ formStep, setFormStep }) => {
+const FormProgressIndicator = ({ formStep }) => {
 	const steps = [
 		{
 			title: "Soil Information",

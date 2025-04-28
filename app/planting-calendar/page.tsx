@@ -3,10 +3,7 @@
 import { useState } from "react";
 import {
 	ChevronLeft,
-	ChevronRight,
-	Leaf,
-    CheckCircle,
-    Hammer
+	ChevronRight
 
 } from "lucide-react";
 import TopNav from "../../components/TopNav";

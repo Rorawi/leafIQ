@@ -3,7 +3,6 @@
 import WeatherCards from "@/components/WeatherCards";
 import TopNav from "../../components/TopNav";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import Image from "next/image";
 import { useEffect } from "react";
 import WeatherPageSection from "../../components/weather/WeatherPageSection";
 

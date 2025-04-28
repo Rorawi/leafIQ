@@ -15,7 +15,7 @@ type Card = {
 };
 
 export default function WeatherCards() {
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef(null);
   const cards: Card[] = [
     {
       id: 'weather',

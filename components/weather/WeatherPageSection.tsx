@@ -68,7 +68,7 @@ const WeatherSection = () => {
   useEffect(() => {
     // Get user's location and determine local time
     getUserLocation();
-  }, []);
+  });
   
   const getUserLocation = () => {
     if (navigator.geolocation) {

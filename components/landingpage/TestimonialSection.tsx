@@ -50,3 +50,5 @@ const TestimonialSection =()=> {
       </div>
     </>);
 }
+
+export default TestimonialSection;
